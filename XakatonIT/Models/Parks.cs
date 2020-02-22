@@ -9,7 +9,7 @@ namespace XakatonIT.Models
     {
         public int ID { get; set; }
         public string Title { get; set; } //Название парка
-        public int Address { get; set; } //Адрес парка
+        public string Address { get; set; } //Адрес парка
         public int Area { get; set; } //Размер парка
         public double Rating { get; set; } //Рейтинг парка
     }
