@@ -72,3 +72,29 @@ body {
 .border {
     border: 3px solid red;
 }
+#map {
+    height: 800px;
+}
+
+@media only all and (max-height: 720px) {
+    #map {
+        height: 550px;
+    }
+}
+
+.navigation {
+    background-color: #B0E0E6;
+    display: block;
+    height: 100%;
+    font-size: 22px;
+}
+#category li {
+    border-bottom: 2px solid #000;
+    padding-left: 0px;
+    margin-left: -40px;
+    list-style-type: none;
+    text-align: center;
+    display: block;
+    height: 100%;
+    border-radius: 5px;
+}
