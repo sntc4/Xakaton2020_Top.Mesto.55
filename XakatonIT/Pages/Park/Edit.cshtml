@@ -1,0 +1,50 @@
+﻿@page
+@model XakatonIT.Pages.Park.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Parks</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Parks.ID" />
+            <div class="form-group">
+                <label asp-for="Parks.Title" class="control-label"></label>
+                <input asp-for="Parks.Title" class="form-control" />
+                <span asp-validation-for="Parks.Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Parks.Address" class="control-label"></label>
+                <input asp-for="Parks.Address" class="form-control" />
+                <span asp-validation-for="Parks.Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Parks.Area" class="control-label"></label>
+                <input asp-for="Parks.Area" class="form-control" />
+                <span asp-validation-for="Parks.Area" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Parks.Rating" class="control-label"></label>
+                <input asp-for="Parks.Rating" class="form-control" />
+                <span asp-validation-for="Parks.Rating" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
